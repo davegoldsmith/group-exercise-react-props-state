@@ -29,7 +29,7 @@ function App() {
       joke: "Chuck Norris does not own a stove, oven, or microwave, because revenge is a dish best served cold.",
     },
   ]);
-	const filteredJokes = jokes.filter((joke) => joke.id === 3);
+  const filteredJokes = jokes.filter((joke) => joke.id === 3);
 
   return (
     <div className="App">
@@ -39,15 +39,11 @@ function App() {
       <ChuckInfo whalesSaved={whalesSaved} roundHouseKicks={roundHouseKicks} />
       <h2>Jokes: </h2>
       {jokes.map((joke) => (
-        <ChuckJoke 
-				key={joke.id}
-				joke={joke.joke} />
+        <ChuckJoke key={joke.id} joke={joke.joke} />
       ))}
-			<h2>Filtered Jokes:</h2>
-			{filteredJokes.map((joke) => (
-        <ChuckJoke 
-				key={joke.id}
-				joke={joke.joke} />
+      <h2>Filtered Jokes:</h2>
+      {filteredJokes.map((joke) => (
+        <ChuckJoke key={joke.id} joke={joke.joke} />
       ))}
     </div>
   );
